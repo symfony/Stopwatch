@@ -187,4 +187,9 @@ class StopwatchTest extends TestCase
 
         $this->assertEquals(new Stopwatch(), $stopwatch);
     }
+
+    public function testShouldReturnEmptyArrayWhenSectionMissing()
+    {
+        $this->assertSame([], (new Stopwatch())->getSectionEvents('missing'));
+    }
 }
